@@ -7,20 +7,22 @@
 </head>
 
 <body>
-    <h1 id="texto"> Aperte o botão e insira o texto! </h1>
-    <button onclick="inserirTexto()">Aperte para inserir o texto</button>
-    
-    
-    <form method="POST">
-        <button type="submit" name="btn-sbmt" id="btn-sbmt"> Aperte para inserir o texto </button>
-    </form>
     <?php 
 
-    
-    if(isset($_POST["btn-sbmt"])) {
-        echo "<script>document.getElementById(texto) = 'Olá mundo!';<script>";
+    $texto = "Aperte o botão para inserir o texto";
+
+    if(isset($_POST['btn-sbmt'])) {
+        $texto = 'Olá Mundo!';
+    } else {
+        $texto = 'Aperte o botão para inserir o texto';
     }
     ?>
+
+    <h1> <?php echo $texto; ?> </h1>
+    
+    <form method="POST">
+    <button type="submit" name="btn-sbmt" id="btn-sbmt"> Botão </button>
+    </form>
     
 </body>
 </html>
