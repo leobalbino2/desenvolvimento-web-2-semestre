@@ -10,6 +10,17 @@
     <h1 id="texto"> Aperte o botão e insira o texto! </h1>
     <button onclick="inserirTexto()">Aperte para inserir o texto</button>
     
-    <script src="./js/ex01.js"></script>
+    
+    <form method="POST">
+        <button type="submit" name="btn-sbmt" id="btn-sbmt"> Aperte para inserir o texto </button>
+    </form>
+    <?php 
+
+    
+    if(isset($_POST["btn-sbmt"])) {
+        echo "<script>document.getElementById(texto) = 'Olá mundo!';<script>";
+    }
+    ?>
+    
 </body>
 </html>
