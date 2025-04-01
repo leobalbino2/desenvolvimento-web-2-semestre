@@ -9,20 +9,30 @@
 <body>
     <?php 
 
-    $texto = "Aperte o botão para inserir o texto";
+    $mensagem = "Aperte o botão para inserir o texto";
 
     if(isset($_POST['btn-sbmt'])) {
-        $texto = 'Olá Mundo!';
-    } else {
-        $texto = 'Aperte o botão para inserir o texto';
+        $mensagem = 'Olá Mundo!';
     }
     ?>
 
-    <h1> <?php echo $texto; ?> </h1>
+    <h1> <?php echo $mensagem; ?> </h1>
     
     <form method="POST">
-    <button type="submit" name="btn-sbmt" id="btn-sbmt"> Botão </button>
+    <button type="submit" name="btn-sbmt"> Botão </button>
     </form>
-    
+
+    <br>
+    <hr>
+    <br>
+
+    <?php
+    $texto = "Olá mundo 2!";
+   
+
+    echo  "<h1> $texto </h1>"
+
+    ?>
+
 </body>
 </html>
